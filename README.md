@@ -18,3 +18,13 @@ Documents all technical aspects of the project including API specs, database des
 
 📋 Project Coordinator
 Manages team dynamics, assigns roles, monitors progress against milestones, and ensures alignment with the overall software development lifecycle (SDLC). Facilitates effective communication and team collaboration using GitHub project tools.
+
+# Technology Stack
+Technology	Purpose
+Django:	A high-level Python web framework used to build robust backend systems and RESTful APIs. It provides built-in support for authentication, ORM, and security.
+MySQL:	A relational database system used to store and manage structured data such as users, listings, bookings, and payments.
+GraphQL:	A query language for APIs that allows clients to request exactly the data they need, improving performance and flexibility over traditional REST APIs.
+Docker:	A containerization tool used to package the application and its dependencies, ensuring consistent environments across development and deployment.
+GitHub	:A platform for version control and team collaboration, where source code is stored, reviewed, and managed through Git.
+GitHub: Actions	A CI/CD tool integrated with GitHub to automate testing, building, and deploying the application.
+Markdown:	A lightweight markup language used to create structured documentation such as the README.md file and other project-related guides.
