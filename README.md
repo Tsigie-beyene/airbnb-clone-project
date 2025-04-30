@@ -152,4 +152,28 @@ One Property ↔️ Many Reviews
 
 One Booking ↔️ One Payment
 
-#
+# Feature Breakdown
+User Management
+Handles user registration, login, and role-based access (e.g., guest or host). Implements secure authentication and password hashing to protect user credentials and manage sessions.
+
+🏘️ Property Management
+Allows hosts to create, update, and delete property listings. Each listing includes location, pricing, and availability details. This feature enables the core supply-side functionality of the platform.
+
+📅 Booking System
+Enables users to search for available properties and make bookings based on check-in/check-out dates. Prevents overlapping reservations and ensures smooth coordination between users and property availability.
+
+🌟 Reviews & Ratings
+Guests can rate their stays and leave reviews for properties. Hosts can view feedback to improve their offerings, and new guests can use reviews to make informed decisions.
+
+💳 Payment Integration
+Processes and records payments for bookings. Includes support for payment status tracking and links payments to specific reservations, ensuring a complete transactional workflow.
+
+🛡️ API Security
+Implements secure authentication (e.g., JWT), request validation, and role-based permissions to protect sensitive data and prevent unauthorized access to resources.
+
+⚙️ CI/CD Pipeline
+Uses GitHub Actions to automate testing, building, and deployment processes. This ensures faster iterations, fewer manual errors, and reliable delivery of new features.
+
+📚 Project Documentation
+Comprehensive documentation in Markdown format, including database schema, API endpoints, and setup instructions. This promotes transparency, maintainability, and team collaboration.
+
