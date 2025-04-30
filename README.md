@@ -210,5 +210,26 @@ Why it matters: Protects users' financial information and maintains legal compli
 7. Error Handling & Logging
 Description: Hides sensitive information in error messages and logs suspicious activity for later analysis.
 
-Why it matters: Prevents attackers from learning system internals while helping developers identify and resolve security threats.
+Why it matters: Prevents attackers from learning system internals while helping developers identify and resolve security threats. 
+
+# CI/CD Pipeline Overview
+Continuous Integration (CI) and Continuous Deployment (CD) are essential DevOps practices that automate the process of building, testing, and deploying code. In the Airbnb Clone Project, CI/CD pipelines help ensure that every change pushed to the repository is automatically verified and safely deployed.
+
+🔄 Why It Matters:
+Improves Code Quality: Automated testing detects bugs early and ensures code reliability before deployment.
+
+Accelerates Development: Reduces manual steps and speeds up the release cycle by automating build, test, and deployment tasks.
+
+Minimizes Downtime: Automated pipelines reduce human error, making deployments more predictable and stable.
+
+Encourages Collaboration: Makes it easier for multiple team members to contribute and merge changes with confidence.
+
+🛠️ Tools Used:
+GitHub Actions: Automates workflows for testing and deployment directly from your GitHub repository.
+
+Docker: Ensures the application runs consistently across different environments by containerizing services.
+
+(Optional) Heroku / AWS / Railway: Can be used as deployment platforms to host the application and manage release pipelines.
+
+
 
