@@ -176,4 +176,39 @@ Uses GitHub Actions to automate testing, building, and deployment processes. Thi
 
 📚 Project Documentation
 Comprehensive documentation in Markdown format, including database schema, API endpoints, and setup instructions. This promotes transparency, maintainability, and team collaboration.
+# API Security Overview
+1. Authentication
+Description: Uses secure login methods (e.g., JWT or token-based authentication) to verify the identity of users before granting access to protected resources.
+
+Why it matters: Prevents unauthorized access and ensures that only registered users can interact with their accounts or make bookings.
+
+2. Authorization
+Description: Implements role-based access control (RBAC) to define permissions for guests, hosts, and admins.
+
+Why it matters: Restricts actions based on user roles—for example, only hosts can manage listings, and only the booking owner can cancel a reservation.
+
+3. Input Validation & Sanitization
+Description: Ensures that all incoming data (from forms, URLs, and APIs) is properly validated and sanitized.
+
+Why it matters: Prevents common vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and data corruption.
+
+4. Rate Limiting & Throttling
+Description: Limits the number of API requests per user/IP address within a specific timeframe.
+
+Why it matters: Protects the system against brute-force attacks, denial-of-service (DoS), and abuse of endpoints.
+
+5. Data Encryption
+Description: Uses HTTPS (SSL/TLS) for secure data transmission and applies password hashing (e.g., bcrypt) for storing credentials.
+
+Why it matters: Protects sensitive data (like login info and payment details) from being intercepted or stolen during transmission or from the database.
+
+6. Secure Payment Handling
+Description: Ensures payment processing is performed through trusted, PCI-compliant third-party services and stores only transaction references, not card data.
+
+Why it matters: Protects users' financial information and maintains legal compliance for handling payments.
+
+7. Error Handling & Logging
+Description: Hides sensitive information in error messages and logs suspicious activity for later analysis.
+
+Why it matters: Prevents attackers from learning system internals while helping developers identify and resolve security threats.
 
