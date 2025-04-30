@@ -28,3 +28,128 @@ Docker:	A containerization tool used to package the application and its dependen
 GitHub	:A platform for version control and team collaboration, where source code is stored, reviewed, and managed through Git.
 GitHub: Actions	A CI/CD tool integrated with GitHub to automate testing, building, and deploying the application.
 Markdown:	A lightweight markup language used to create structured documentation such as the README.md file and other project-related guides.
+
+# Database Design
+🧑 Users
+Represents people using the platform (guests or hosts).
+
+Key Fields:
+
+id: Unique identifier for each user
+
+name: Full name of the user
+
+email: User's email address (must be unique)
+
+password_hash: Securely stored password
+
+role: Guest or Host
+
+Relationships:
+
+A user can own multiple properties
+
+A user can make multiple bookings
+
+A user can write multiple reviews
+
+🏠 Properties
+Represents listings posted by hosts.
+
+Key Fields:
+
+id: Unique identifier for each property
+
+owner_id: Foreign key linking to the user who owns the property
+
+title: Name or short description of the listing
+
+location: Address or city
+
+price_per_night: Cost of one night stay
+
+Relationships:
+
+A property belongs to one user (host)
+
+A property can have multiple bookings
+
+A property can have multiple reviews
+
+📅 Bookings
+Represents reservations made by users for properties.
+
+Key Fields:
+
+id: Unique identifier for each booking
+
+user_id: Foreign key referencing the guest who made the booking
+
+property_id: Foreign key linking to the booked property
+
+start_date: Booking start date
+
+end_date: Booking end date
+
+Relationships:
+
+A booking belongs to one user (guest)
+
+A booking belongs to one property
+
+A booking may have one associated payment
+
+💳 Payments
+Represents payment transactions for bookings.
+
+Key Fields:
+
+id: Unique identifier for the payment
+
+booking_id: Foreign key referencing the booking
+
+amount: Total amount paid
+
+payment_method: e.g., Credit Card, PayPal
+
+status: Paid, Pending, Failed
+
+Relationships:
+
+A payment belongs to one booking
+
+🌟 Reviews
+Represents user feedback on properties.
+
+Key Fields:
+
+id: Unique identifier for the review
+
+user_id: Foreign key referencing the reviewer
+
+property_id: Foreign key referencing the reviewed property
+
+rating: Numerical score (e.g., 1 to 5)
+
+comment: Textual review
+
+Relationships:
+
+A review belongs to one user
+
+A review belongs to one property
+
+🧬 Entity Relationships Summary
+One User ↔️ Many Properties (as Host)
+
+One User ↔️ Many Bookings (as Guest)
+
+One User ↔️ Many Reviews
+
+One Property ↔️ Many Bookings
+
+One Property ↔️ Many Reviews
+
+One Booking ↔️ One Payment
+
+#
